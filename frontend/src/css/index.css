@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap'); 
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --font-iceland: "Iceland", monochrome;
     --font-heading: var(--font-sans);
     --font-sans: 'Geist Variable', sans-serif;
     --color-sidebar-ring: var(--sidebar-ring);
@@ -123,10 +126,10 @@
     outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
     }
   body {
-    background-color: var(--foreground);
-    color: var(--background);
+    background-color: var(--background);
+    color: var(--foreground);
     }
   html {
-    font-family: var(--font-sans);
+    font-family: var(--font-iceland)
     }
 }
