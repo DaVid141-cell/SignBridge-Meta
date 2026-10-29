@@ -1,10 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import '../css/index.css'
-import LandingPage from "../page/landing-page.tsx"
+import LandingPage from "@/page/landing-page";
+import { Routes, Route as RouterRoute } from "react-router-dom"
+import DemoPage from "@/page/demo";
 
-createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <LandingPage/>
-    </StrictMode>
-)
+export default function Route() {
+    return (
+        <Routes>
+            <RouterRoute path="/" element={<LandingPage />} />
+            <RouterRoute path="/demo" element={<DemoPage/>} />
+        </Routes>
+    )
+}
